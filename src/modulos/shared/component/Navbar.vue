@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-link to="/">Inicio</router-link>
-    <router-link to="/id">POkemon</router-link>
+    <router-link :to="{name:'pokemon',params:{id:1}}">POkemon</router-link>
     <router-link to="/about">About</router-link>
   </div>
 </template>
