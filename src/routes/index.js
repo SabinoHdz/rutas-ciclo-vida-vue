@@ -4,7 +4,7 @@ const router=createRouter({
     routes:[
         {path:'/',name:'home',component:()=>import(/*webpackChunkName: "HomeView"*/'@/modulos/pokemon/pages/ListPage.vue')},
         {
-            path:'/:id',name:'pokemon',component:()=>import(/*webpackChunkName: "PokemonView"*/'@/modulos/pokemon/pages/PokemonPage.vue'),
+            path:'/pokemon/:id',name:'pokemon',component:()=>import(/*webpackChunkName: "PokemonView"*/'@/modulos/pokemon/pages/PokemonPage.vue'),
             props:(route)=>{
                 const id=Number(route.params.id);
                 return {id};
