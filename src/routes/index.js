@@ -15,4 +15,17 @@ const router=createRouter({
     ]
 });
 
+//Guardar Global-Sincrono
+router.beforeEach((to,from,next)=>{
+    console.log({to,from,next})
+    const random=Math.random()*100;
+    if(random>50){
+        console.log("Autenticado");
+        next();
+    }else{
+        console.log("Bloqueado por el before");
+        next({name:'home'});
+    }
+});
+
 export default router;
